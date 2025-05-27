@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "MovieProject.Controllers.AdminApiController",
+    "Method": "Login",
+    "RelativePath": "api/adminapi/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MovieProject.ApiDto.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieProject.Controllers.AdminApiController",
+    "Method": "Register",
+    "RelativePath": "api/adminapi/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MovieProject.ApiDto.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

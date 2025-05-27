@@ -1,0 +1,53 @@
+﻿@using MovieProject.ViewModels
+@model GenreListViewModel
+
+@{
+    ViewData["Title"] = "Türler";
+}
+
+<div class="container py-4">
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="card mb-4">
+        <div class="card-header"><strong>Yeni Tür Ekle</strong></div>
+        <div class="card-body">
+            <form asp-action="Index" method="post" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label asp-for="NewGenreId" class="form-label"></label>
+                        <input asp-for="NewGenreId" class="form-control" />
+                        <span asp-validation-for="NewGenreId" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="NewGenreName" class="form-label"></label>
+                        <input asp-for="NewGenreName" class="form-control" />
+                        <span asp-validation-for="NewGenreName" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button type="submit" class="btn btn-primary">Ekle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr><th>Kod</th><th>Ad</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var g in Model.Genres)
+            {
+                <tr>
+                    <td>@g.GenreId</td>
+                    <td>@g.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

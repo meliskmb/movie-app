@@ -1,0 +1,40 @@
+﻿@model MovieProject.ViewModels.LoginViewModel
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm">
+                <div class="card-header text-center">
+                    <h3 class="mb-0">Admin Giriş Yap</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Login" method="post" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Username" class="form-label"></label>
+                            <input asp-for="Username" class="form-control" />
+                            <span asp-validation-for="Username" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Giriş Yap</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <small>
+                        İlk defa mı geliyorsunuz?
+                        <a asp-action="Register" asp-controller="Admin">Kayıt Ol</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
