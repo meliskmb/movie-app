@@ -1,0 +1,14 @@
+# Build klasörleri
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Diğer geçici dosyalar
+*.cache
+*.log
+*.db
+*.pdb
